@@ -6,11 +6,6 @@ int main(int argc, char* argv[])
     /*some declartions for the gui*/
     List* eventList = newList();
     Window* window = createWindow("UCP Calendar - Luke Mercuri (17365547)");
-    pFunc btnLoad = *uiLoadButton;
-    pFunc btnSave = *uiSaveButton;
-    pFunc btnEdit = *uiEditButton;
-    pFunc btnNew = *uiNewButton;
-    pFunc btnDel = *uiDelButton;
     Data data;
     
     /*window and list pointers that we
@@ -42,11 +37,11 @@ int main(int argc, char* argv[])
 
 
     /*fill window with some buttons to use*/
-    addButton(window, "Load Calendar File", btnLoad, (void*)&data);
-    addButton(window, "Save Calendar File", btnSave, (void*)&data);
-    addButton(window, "Edit Calendar Entry", btnEdit, (void*)&data);
-    addButton(window, "New Calendar Entry", btnNew, (void*)&data);
-    addButton(window, "Delete Calendar Entry", btnDel, (void*)&data);
+    addButton(window, "Load Calendar File", uiLoadButton, (void*)&data);
+    addButton(window, "Save Calendar File", uiSaveButton, (void*)&data);
+    addButton(window, "Edit Calendar Entry", uiEditButton, (void*)&data);
+    addButton(window, "New Calendar Entry", uiNewButton, (void*)&data);
+    addButton(window, "Delete Calendar Entry", uiDelButton, (void*)&data);
 
     runGUI(window);
     
